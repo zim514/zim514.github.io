@@ -9,7 +9,7 @@
   <checksum>https://zim514.github.io/repo/addons.xml.md5</checksum>
   <datadir zip="true">https://zim514.github.io/repo/</datadir>
 </extension>
-</addon><addon id="script.service.hue" name="Hue Service" provider-name="zim514" version="0.3.7">
+</addon><addon id="script.service.hue" name="Hue Service" provider-name="zim514" version="0.4.0">
 	
   <requires>
     <import addon="xbmc.python" version="2.26.0" />
@@ -20,7 +20,7 @@
 
   <extension library="service.py" name="service.hue" point="xbmc.service">
   </extension> 
-  <extension library="default.py" point="xbmc.python.script">
+  <extension library="menu.py" point="xbmc.python.script">
   	<provides>executable</provides>
   </extension>
   
@@ -33,6 +33,10 @@
     <platform>all</platform>
     <license>MIT License</license>
     <news>
+v0.4.0:
+- Rewrite bridge discovery with discoverhue library (https://github.com/Overboard/discoverhue)
+- Add activation schedule support
+- 
 v0.3.7
 - Fix crash at sunset
 v0.3.6:
