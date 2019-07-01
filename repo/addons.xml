@@ -1,7 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.snapcase" name="Snapcase Repo" provider-name="zim514" version="1.0.0">
+<addons><addon id="repository.snapcase" name="Snapcase Repo" provider-name="zim514" version="1.0.1">
 <extension name="Snapcase Repo" point="xbmc.addon.metadata">
   <summary lang="en">Snapcase's Repo</summary>
+  <assets>
+  		<icon>icon.png</icon>
+  		<fanart>fanart.jpg</fanart>
+  		<screenshot>fanart.jpg</screenshot>
+  </assets>
   <platform>all</platform>
 </extension>
 <extension name="Snapcase's Repo" point="xbmc.addon.repository">
