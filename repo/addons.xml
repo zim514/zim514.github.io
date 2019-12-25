@@ -62,4 +62,19 @@ v0.9.5:
 - Fix saturation option and related settings
 		</news>
 	</extension>
+</addon><addon id="script.module.pyrollbar" name="pyrollbar" provider-name="rollbar" version="0.14.7">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.requests" optional="false" version="2.3.0" />
+    <import addon="script.module.six" optional="false" version="1.9.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Error tracking and logging from Python to Rollbar</summary>
+    <description>Python notifier for reporting exceptions, errors, and log messages to Rollbar.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/rollbar/pyrollbar</source>
+    <website>https://rollbar.com/docs/notifier/pyrollbar</website>
+  </extension>
 </addon></addons>
