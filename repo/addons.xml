@@ -52,7 +52,7 @@ Add option to always enable scenes if any lights are on (thanks @cyberden!)
 Add video activation toggle for PVR
 		</news>
 	</extension>
-</addon><addon id="script.module.pyrollbar" name="pyrollbar" provider-name="rollbar" version="0.14.7">
+</addon><addon id="script.module.pyrollbar" name="pyrollbar" provider-name="rollbar" version="0.15.0">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
     <import addon="script.module.requests" optional="false" version="2.3.0" />
