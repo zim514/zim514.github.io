@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.snapcase" version="1.0.3" name="Snapcase Repo" provider-name="zim514">
+<addon id="repository.snapcase" version="1.0.4" name="Snapcase Repo" provider-name="zim514">
 <extension point="xbmc.addon.metadata" name="Snapcase Repo">
   <summary lang="en">Snapcase's Repo</summary>
   <platform>all</platform>
