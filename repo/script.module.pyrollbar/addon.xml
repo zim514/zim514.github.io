@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.pyrollbar"
        name="pyrollbar"
-       version="0.15.1"
+       version="0.15.2"
        provider-name="rollbar">
   <requires>
     <import addon="script.module.requests" version="2.3.0" optional="false"/>
