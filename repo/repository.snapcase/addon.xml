@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.snapcase" version="1.0.6" name="Snapcase Dev Repo" provider-name="zim514">
+<addon id="repository.snapcase" version="1.0.7" name="Snapcase Dev Repo" provider-name="zim514">
 <extension point="xbmc.addon.metadata" name="Snapcase Dev Repo">
   <summary lang="en">Snapcase's Dev Repo</summary>
   <description lang="en">Development versions of Hue addon. Stable versions are in the official Kodi repository.</description>
   <platform>all</platform>
 </extension>
 <extension point="xbmc.addon.repository" name="Snapcase's Repo">
-  <info compressed="true">https://zim514.github.io/repo/addons.xml</info>
+  <info compressed="false">https://zim514.github.io/repo/addons.xml</info>
   <checksum>https://zim514.github.io/repo/addons.xml.md5</checksum>
   <datadir zip="true">https://zim514.github.io/repo/</datadir>
 </extension>
