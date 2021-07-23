@@ -28,9 +28,10 @@
 		<summary lang="en_GB">Automate Hue lights with Kodi playback</summary>
 		<description lang="en_GB">Automate your Philips Hue lights with Kodi. Create multi-room scenes that run when you Play, Pause or Stop media playback. Create and delete multi-room scenes from add-on settings then select which to apply for different Playback events. Can use Hue's sunrise and sunset times to automatically disable the service during daytime and turn on the lights at sunset during playback. Includes Ambilight support.</description>
 	</extension>
-</addon><addon id="repository.snapcase" version="1.0.4" name="Snapcase Repo" provider-name="zim514">
+</addon><addon id="repository.snapcase" version="1.0.5" name="Snapcase Repo" provider-name="zim514">
 <extension point="xbmc.addon.metadata" name="Snapcase Repo">
-  <summary lang="en">Snapcase's Repo</summary>
+  <summary lang="en">Snapcase's Development Repo</summary>
+  <description lang="en">Development versions of Hue addon. Stable versions are in the official repository.</description>
   <platform>all</platform>
 </extension>
 <extension point="xbmc.addon.repository" name="Snapcase's Repo">
