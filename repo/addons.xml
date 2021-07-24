@@ -8,8 +8,8 @@
 		<import addon="script.module.pyrollbar" version="0.15.2" />
         
 	</requires>
-	<extension library="service.py" name="service.hue" point="xbmc.service" />
-	<extension library="plugin.py" point="xbmc.python.pluginsource">
+	<extension point="xbmc.service" name="service.hue" library="service.py" />
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
 		<provides>executable</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -32,8 +32,8 @@ Update settings system
 		<description lang="en_GB">Automate your Hue lights with Kodi. Create multi-room scenes that run when you Play, Pause or Stop media playback. Create and delete multi-room scenes from add-on settings then select which to apply for different Playback events. Can use Hue's sunrise and sunset times to automatically disable the service during daytime and turn on the lights at sunset during playback. Includes Ambilight support.</description>
 		<disclaimer lang="en_GB">Requires a Hue Bridge V2 (Square). Ambilight not available on all hardware.</disclaimer>
 	</extension>
-</addon><addon id="repository.snapcase" name="Snapcase Dev Repo" provider-name="zim514" version="1.0.8">
-<extension name="Snapcase Repo" point="xbmc.addon.metadata">
+</addon><addon id="repository.snapcase" version="1.0.8" name="Snapcase Dev Repo" provider-name="zim514">
+<extension point="xbmc.addon.metadata" name="Snapcase Repo">
   <summary lang="en">Snapcase's Local Repo</summary>
   <assets>
       <icon>icon.png</icon>
@@ -44,12 +44,12 @@ Update settings system
   <disclaimer lang="en_GB">Use at your own risk</disclaimer>
   <platform>all</platform>
 </extension>
-<extension name="Snapcase Dev Repo" point="xbmc.addon.metadata">
+<extension point="xbmc.addon.metadata" name="Snapcase Dev Repo">
   <summary lang="en">Snapcase's Dev Repo</summary>
   <description lang="en">Development versions of Hue addon. Stable versions are in the official Kodi repository.</description>
   <platform>all</platform>
 </extension>
-<extension name="Snapcase's Repo" point="xbmc.addon.repository">
+<extension point="xbmc.addon.repository" name="Snapcase's Repo">
   <info compressed="true">https://zim514.github.io/repo/addons.xml</info>
   <checksum>https://zim514.github.io/repo/addons.xml.md5</checksum>
   <datadir zip="true">https://zim514.github.io/repo/</datadir>
