@@ -32,7 +32,18 @@ Update settings system
 		<description lang="en_GB">Automate your Hue lights with Kodi. Create multi-room scenes that run when you Play, Pause or Stop media playback. Create and delete multi-room scenes from add-on settings then select which to apply for different Playback events. Can use Hue's sunrise and sunset times to automatically disable the service during daytime and turn on the lights at sunset during playback. Includes Ambilight support.</description>
 		<disclaimer lang="en_GB">Requires a Hue Bridge V2 (Square). Ambilight not available on all hardware.</disclaimer>
 	</extension>
-</addon><addon id="repository.snapcase" version="1.0.7" name="Snapcase Dev Repo" provider-name="zim514">
+</addon><addon id="repository.snapcase" version="1.0.8" name="Snapcase Dev Repo" provider-name="zim514">
+<extension point="xbmc.addon.metadata" name="Snapcase Repo">
+  <summary lang="en">Snapcase's Local Repo</summary>
+  <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+  </assets>
+  <summary lang="en_GB">Snapcase's Dev repo</summary>
+  <description lang="en_GB">Development repo for Hue Service</description>
+  <disclaimer lang="en_GB">Use at your own risk</disclaimer>
+  <platform>all</platform>
+</extension>
 <extension point="xbmc.addon.metadata" name="Snapcase Dev Repo">
   <summary lang="en">Snapcase's Dev Repo</summary>
   <description lang="en">Development versions of Hue addon. Stable versions are in the official Kodi repository.</description>
