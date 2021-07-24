@@ -190,8 +190,7 @@ def fetch_addon_from_git(addon_location, target_folder):
         r'((?:[A-Za-z0-9+.-]+://)?.*?)(?:#([^#]*?))?(?::([^:]*))?$',
         addon_location)
     (clone_repo, clone_branch, clone_path_option) = match.groups()
-    clone_path = (os.path.join('.', '')
-                  if clone_path_option is None else clone_path_option)
+    clone_path = ('./' if clone_path_option is None else clone_path_option)
 
     # Create a temporary folder for the git clone.
     clone_folder = tempfile.mkdtemp('-repo')
@@ -215,7 +214,7 @@ def fetch_addon_from_git(addon_location, target_folder):
             cloned.archive(
                 archive,
                 treeish='HEAD:{}'.format(clone_path),
-                prefix=os.path.join(addon_metadata.id, ''),
+                prefix=os.path.normpath(addon_metadata.id) + '/',
                 format='zip')
         generate_checksum(archive_path)
 
@@ -249,7 +248,7 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
             for relative_path in files:
                 archive.write(
                     os.path.join(root, relative_path),
-                    os.path.join(relative_root, relative_path))
+                    os.path.normpath(os.path.join(relative_root, relative_path)))
     generate_checksum(archive_path)
 
     if not samefile(addon_location, addon_target_folder):
