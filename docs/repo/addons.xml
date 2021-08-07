@@ -48,21 +48,16 @@ Update settings system</news>
 		<disclaimer lang="cs_CZ">Vyžaduje Hue Bridge V2 (čtvercový). Ambilight není podporován na všech zařízeních.</disclaimer>
 		<disclaimer lang="en_GB">Requires a Hue Bridge V2 (Square). Ambilight not available on all hardware.</disclaimer>
 	</extension>
-</addon><addon id="repository.snapcase" version="1.0.8" name="Snapcase Dev Repo" provider-name="zim514">
+</addon><addon id="repository.snapcase" version="1.0.9" name="Snapcase Dev Repo" provider-name="zim514">
 <extension point="xbmc.addon.metadata" name="Snapcase Repo">
-  <summary lang="en">Snapcase's Local Repo</summary>
+  <summary lang="en_GB">Snapcase's Dev Repo</summary>
   <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
   </assets>
   <summary lang="en_GB">Snapcase's Dev repo</summary>
-  <description lang="en_GB">Development repo for Hue Service</description>
+  <description lang="en_GB">Development versions of Hue addon. Stable versions are in the official Kodi repository.</description>
   <disclaimer lang="en_GB">Use at your own risk</disclaimer>
-  <platform>all</platform>
-</extension>
-<extension point="xbmc.addon.metadata" name="Snapcase Dev Repo">
-  <summary lang="en">Snapcase's Dev Repo</summary>
-  <description lang="en">Development versions of Hue addon. Stable versions are in the official Kodi repository.</description>
   <platform>all</platform>
 </extension>
 <extension point="xbmc.addon.repository" name="Snapcase's Repo">
