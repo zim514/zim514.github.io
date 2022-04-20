@@ -51,6 +51,20 @@ Update to new settings system</news>
 		<disclaimer lang="en_GB">Requires a Hue Bridge V2 (Square). Ambilight not available on all hardware.</disclaimer>
 		<disclaimer lang="ko_KR">Hue Bridge V2(정사각형)가 필요합니다. 모든 하드웨어에서 Ambilight를 사용할 수 있는 것은 아닙니다.</disclaimer>
 	</extension>
+</addon><addon id="script.module.qhue" name="qhue" version="2.0.1" provider-name="Quentin Stafford-Fraser">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<license>MIT</license>
+	    <summary lang="en_GB">A very lightweight Python wrapper to the Philips Hue API</summary>
+	    <description lang="en_GB">A very lightweight Python wrapper to the Philips Hue API</description>
+	    <platform>all</platform>
+	    <forum>https://forum.kodi.tv/showthread.php?tid=170715</forum>
+	    <website>https://github.com/quentinsf/qhue</website>
+	    <source>https://github.com/quentinsf/qhue</source>
+	</extension>
 </addon><addon id="repository.snapcase" version="1.0.9" name="Snapcase Dev Repo" provider-name="zim514">
 <extension point="xbmc.addon.metadata" name="Snapcase Repo">
   <summary lang="en_GB">Snapcase's Dev Repo</summary>
