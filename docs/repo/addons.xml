@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="script.service.hue" name="Hue Service" provider-name="zim514" version="2.3.2">
+<addons><addon id="script.service.hue" name="Hue Service" provider-name="zim514" version="2.3.3">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.31.0" />
@@ -90,4 +90,23 @@
     <datadir zip="true">https://zim514.github.io/repo/</datadir>
   </dir>
 </extension>
+</addon><addon id="script.module.pyrollbar" name="pyrollbar" version="1.3.0" provider-name="rollbar">
+  <requires>
+    <import addon="script.module.requests" version="2.31.0" />
+    <import addon="script.module.six" version="1.16.0" />
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Error tracking and logging from Python to Rollbar</summary>
+    <description lang="en_GB">Python notifier for reporting exceptions, errors, and log messages to Rollbar.</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <source>https://github.com/rollbar/pyrollbar</source>
+    <website>https://docs.rollbar.com/docs/python</website>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+
 </addon></addons>
