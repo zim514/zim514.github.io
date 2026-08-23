@@ -89,10 +89,18 @@ METADATA_BASENAMES = (
 # The Kodi documentation at
 # http://kodi.wiki/index.php?title=Addon.xml&oldid=128873#How_versioning_works
 # adds a twist by recommending a tilde instead of a hyphen.
-VERSION_PATTERN = (r'^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)'
-                   r'(?:[-~]((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)'
-                   r'(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?'
-                   r'(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$')
+SEMVER_VERSION_PATTERN = (r'^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)'
+                          r'(?:[-~]((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)'
+                          r'(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?'
+                          r'(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$')
+# Kodi is looser than semver: it allows up to five numeric components and a
+# local version identifier introduced by a plus or a tilde, in which
+# underscores are legal (e.g. 1.0.0+matrix.1 or 1.4.0.1+v1_3_0). This mirrors
+# the check that kodi-addon-checker itself applies, so any add-on that passes
+# the checker is accepted here.
+KODI_VERSION_PATTERN = r'^\d+\.\d+(?:\.\d+){0,4}(?:[+~\w]+(?:\.\d+)?)?$'
+# A version is valid if it satisfies either spelling.
+VERSION_PATTERNS = (SEMVER_VERSION_PATTERN, KODI_VERSION_PATTERN)
 
 
 def get_archive_basename(addon_metadata):
@@ -139,7 +147,8 @@ def parse_metadata(metadata_file):
             re.search(r'[^a-z0-9._-]', addon_metadata.id)):
         raise RuntimeError('Invalid add-on ID: {}'.format(addon_metadata.id))
     if (addon_metadata.version is None or
-            not re.match(VERSION_PATTERN, addon_metadata.version)):
+            not any(re.match(pattern, addon_metadata.version)
+                    for pattern in VERSION_PATTERNS)):
         raise RuntimeError(
             'Invalid add-on verson: {}'.format(addon_metadata.version))
     return addon_metadata
